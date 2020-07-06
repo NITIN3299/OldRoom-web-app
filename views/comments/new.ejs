@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+
+
+<div class="container">
+  <h1 style="text-align: center;">ADD New comment to <%= item.name %></h1>
+  <div style="width: 30%; margin: 25px auto;">
+<form action="/oldroom/<%= item._id %>/comments" method="POST">
+    <div class="form-group">
+        <input class="form-control" type="text" name="comment[text]" placeholder="write comment">
+    </div>
+     <div class="form-group">
+         <button class="btn btn-lg btn-info btn-block">POST!</button>
+    </div>
+
+</form>
+<a href="/oldroom"> <-Go back </a>
+</div>
+
+
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <title>Old Room</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="/oldroom">
+              OldRoom
+            </a>
+            <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Find">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+                <ul class="nav justify-content-end ml-auto">
+                  <%  if(!currentuser){ %>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/login"><i class='far fa-user'></i>Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/register"><i class='fas fa-user-plus'></i>Sign UP</a>
+                </li>
+               <% } else{ %>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class='fas fa-user-circle'></i> <%=currentuser.username%></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout<i class="material-icons">exit_to_app</i></a>
+                </li>
+               <% } %>
+                </ul>
+        </nav>
+   
+<div class="container">
+   <% if(error && error.length>0){ %>
+    <div style="margin-top: 1em;"class="alert alert-danger" role="alert">
+        <%=error%>
+    </div>
+    <% } %>
+    <% if(success && success.length>0){ %>
+    <div style="margin-top: 1em;"class="alert alert-success" role="alert">
+        <%=success%>
+    </div>
+    <% } %>
+</div>
