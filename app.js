@@ -46,6 +46,6 @@ app.use("/",authroutes);
 app.use("/oldroom",oldroomroutes);
 app.use("/oldroom/:id/comments",commentroutes);
 
-app.listen(3000,function(){
+app.listen(process.env.PORT,function(){
     console.log("OLDROOM IS STARTING....");
 });
