@@ -18,7 +18,9 @@ var commentroutes=require("./routes/comments"),
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(flash());
 app.set("view engine","ejs");
-mongoose.connect("mongodb://localhost:27017/oldroom_app_v2",{useNewUrlParser:true,useUnifiedTopology:true});
+//mongoose.connect("mongodb://localhost:27017/oldroom_app_v2",{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://nitin:nitinpass@cluster0.8ry5g.mongodb.net/oldroom?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true});
+//mongodb+srv://nitin:<password>@cluster0.8ry5g.mongodb.net/<dbname>?retryWrites=true&w=majority
 app.use(methodoverride("_method"))
 app.use(express.static(__dirname + "/public"));
 //seedDB();
