@@ -5,14 +5,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/app.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <a class="navbar-brand" href="/oldroom">
               OldRoom
             </a>
-            <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Find">
+            <form class="form-inline" action="/oldroom/search" method="POST">
+                <input class="form-control mr-sm-2" name="sitem" type="text" placeholder="Find">
                 <button class="btn btn-success" type="submit">Search</button>
               </form>
                 <ul class="nav justify-content-end ml-auto">

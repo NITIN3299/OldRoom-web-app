@@ -13,7 +13,10 @@
 
 
   <div class="row" style="text-align: center; display: flex; flex-wrap: wrap;">
-     <% items.forEach(function(item){ %>
+    <% if(!items.length){ %>
+      <h1>No Results Found.Check after sometime</h1>
+      <% } %>
+     <% items.length && items.forEach(function(item){ %>
       <div class="col-md-3 col-sm-6">
           <div class="img-thumbnail">
              <img class="img-fluid" src="<%= item.image %>">

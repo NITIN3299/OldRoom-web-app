@@ -27,6 +27,11 @@
                         <button class="btn btn-danger btn-sm">DELETE</button>
                    </form>
                 <% } %>
+                    <% if(!(currentuser && item.author.id.equals(currentuser._id))){ %>
+                        <p>
+                            <a class="btn btn-danger" href="/oldroom/payment">BUY NOW</a>
+                        </p>
+                   <% } %>
                 </div>
             </div>
             <div class="card bg-light">
